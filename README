@@ -1,0 +1,14 @@
+PAM module for password cracking. Builds on Solaris!
+
+Usage is to put something like this in /etc/pam.d/ (Linux) 
+or /etc/pam.conf (Solaris):
+
+passwd  auth		required        /usr/lib/security/$ISA/pam_passwd_auth.so.1
+passwd  password        required        /usr/lib/security/$ISA/pam_authtok_get.so.1
+passwd  password        requisite       /usr/opt/lib/security/pam_cracklib.so use_authtok 
+passwd  password        required        /usr/lib/security/$ISA/pam_authtok_store.so.1 
+
+Putting "debug" at the end of the line will result in verbose logging 
+(do this when something breaks).
+
+
