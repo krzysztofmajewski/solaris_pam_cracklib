@@ -1,0 +1,10 @@
+Make sure you have cracklib - you'll need the header packer.h,
+the shared library libcrack.so, and a dictionary compiled to work with
+cracklib. One way to satisfy this requirement is to search the net for
+Alec Muffett's cracklib, download it, build it, and install it. 
+But there may be other ways. (This package does not come with any
+part of cracklib.)
+
+Make sure you have GNU make. 
+Look through the GNUmakefile. 
+Type 'make' to build, 'make install' (as root) to install.
